@@ -117,7 +117,7 @@ input, select, textarea {
 
 		a:hover {
 			color: #6ccbdd !important;
-			border-bottom-color: transparent;
+			border-bottom-color: rgba(255, 255, 255, 0.3);
 		}
 
 	strong, b {
@@ -753,7 +753,7 @@ input, select, textarea {
 		}
 
 		.row > .col-4 {
-			width: 33%;
+			width: 25%;
 		}
 
 		.row > .off-4 {
