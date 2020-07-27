@@ -247,4 +247,78 @@
 		$banner
 			._parallax();
 
+	// Scroll slide.
+	var $slide = $('.slide');
+
+	$slide
+	.each(function() {
+
+			var $this = $(this)
+
+				var top, bottom, mode
+
+					mode = 'top';
+					top = '-500%';
+					bottom = 0;
+
+
+
+
+				// Add scrollex.
+					$this.scrollex({
+						mode:		mode,
+						top:		top,
+						bottom:		bottom,
+						initialize:	function(t) { $this.addClass('inactive'); },
+						terminate:	function(t) { $this.removeClass('inactive'); },
+						mode: 'top',
+						enter:		function(t) { $this.css('background-color', ''); $this.css('font-size', '200%'); $this.css('line-height', '150%');},
+
+						// Uncomment the line below to "rewind" when this spotlight scrolls out of view.
+						//mode:		'top',
+						//leave:	function(t) { $this.css('background-color', ''); $this.css('font-size', '100%');; $this.css('line-height', '100%')  },
+
+					});
+
+		});
+
+		// Scroll slide.
+		var $slidetext = $('.slidetext');
+
+		$slidetext
+		.each(function() {
+
+				var $this = $(this)
+
+					var top, bottom, mode
+
+						mode = 'top';
+						top = '-50%';
+						bottom = 0;
+
+
+
+
+					// Add scrollex.
+						$this.scrollex({
+							mode:		mode,
+							top:		top,
+							bottom:		bottom,
+							initialize:	function(t) { $this.addClass('inactive'); },
+							terminate:	function(t) { $this.removeClass('inactive'); },
+							scroll: function(progress) {
+
+					      // Progressively increase #foobar's opacity as we scroll through it.
+					        $(this).css('opacity', Math.max(0, Math.min(1, progress)));
+
+					    }
+
+							// Uncomment the line below to "rewind" when this spotlight scrolls out of view.
+							//mode:		'top',
+							//leave:	function(t) { $this.css('background-color', ''); $this.css('font-size', '100%');; $this.css('line-height', '100%')  },
+
+						});
+
+			});
+
 })(jQuery);
