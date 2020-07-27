@@ -648,6 +648,7 @@ input, select, textarea {
 	position: relative;
 	color: #6CCBDD;
 	top: 40px;
+	padding-bottom: 70px;
 	}
 
 	blockquote:before {
@@ -661,7 +662,7 @@ input, select, textarea {
 	}
 
 	blockquote cite {
-	font-size: 14px;
+	font-size: 16px;
 	display: block;
 	margin-top: 5px;
 	color: rgba(255, 255, 255, 0.75);;
